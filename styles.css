@@ -8,59 +8,80 @@ body {
     font-family: 'Anton', sans-serif;
     background-color: #000;
     color: #fff;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
+    min-height: 100vh;
     text-align: center;
-    margin: 0;
 }
 
+/* Main container */
 .container {
     width: 100%;
-    height: 100%;
+    max-width: 500px;
+    padding: 20px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 }
 
-header {
-    margin-bottom: 0px;
-}
-
+/* LOGO */
 .logo img {
-    width: 300px; /* Adjust the size of the logo as needed */
+    width: clamp(120px, 40vw, 280px);
     height: auto;
 }
 
+/* ALBUM COVER */
 .image-container {
     margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .square-image {
-    width: 300px; /* You can adjust the size of the image */
-    height: 300px; /* Keep the height the same as the width for a square image */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 8px; /* Optional: adds rounded corners */
+    width: clamp(180px, 60vw, 320px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+/* SOCIAL ICONS */
 .social-links {
     margin-top: 30px;
-}
 
-.social-icon {
-    margin: 10px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    gap: clamp(15px, 5vw, 30px);
+    flex-wrap: wrap;
 }
 
 .social-icon img {
-    width: 40px; /* Set the size of the social media icons */
+    width: clamp(30px, 8vw, 50px);
     height: auto;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
+/* Hover (desktop only feel) */
 .social-icon:hover img {
-    transform: scale(1.2); /* Slightly enlarge the icon when hovered */
+    transform: scale(1.15);
+}
+
+/* MOBILE TWEAKS */
+@media (max-height: 600px) {
+    .container {
+        justify-content: flex-start;
+    }
+
+    .image-container {
+        margin-top: 10px;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
 }
