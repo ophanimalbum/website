@@ -1,56 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-        <!-- 
-            OPHANIM. COMING SOON.
-        -->
 <head>
-  <meta charset="UTF-8" />
-  <title>--- .--. .... .- -. .. --</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #050505;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    a {
-      color: #ebdeee;
-      font-size: clamp(2rem, 6vw, 5rem);
-      font-weight: 900;
-      letter-spacing: 0.15em;
-      text-align: center;
-      margin: 0;
-      user-select: none;
-      cursor: default;
-      text-decoration: none;
-    }
-
-          a:hover {
-      color: #bfbdbf;
-      font-size: clamp(2rem, 6vw, 5rem);
-      font-weight: 900;
-      letter-spacing: 0.15em;
-      text-align: center;
-      margin: 0;
-      user-select: none;
-      cursor: pointer;
-      text-decoration: none;
-          }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ophanim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1><a href="https://soundcloud.com/ophanimalbum">--- .--. .... .- -. .. --</a></h1>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo_white.png" alt="Ophanim Logo">
+            </div>
+        </header>
+        <main>
+            <div class="image-container">
+                <img src="albumcover.png" alt="Album Cover" class="square-image">
+            </div>
+            <div class="social-links">
+                <a href="https://soundcloud.com/ophanimalbum" target="_blank" class="social-icon">
+                    <img src="soundcloud-white-icon.png" alt="SoundCloud">
+                </a>
+                <a href="https://www.instagram.com/ophan1m/" target="_blank" class="social-icon">
+                    <img src="instagram-white-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@ophanimalbum" target="_blank" class="social-icon">
+                    <img src="youtube-app-white-icon.png" alt="YouTube">
+                </a>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
