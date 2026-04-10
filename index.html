@@ -1,36 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ophanim</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ophanim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Anton', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      width: min(80vw, 320px);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hero-image {
+      width: min(85vw, 340px);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .button-link {
+      display: inline-block;
+      padding: 14px 28px;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      letter-spacing: 0.5px;
+      transition: all 0.25s ease;
+    }
+
+    .button-link:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-icon img {
+      width: 42px;
+      height: 42px;
+      transition: transform 0.25s ease;
+    }
+
+    .social-icon:hover img {
+      transform: scale(1.12);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        gap: 20px;
+      }
+
+      .social-icon img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .button-link {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="logo">
-            <img src="logo_white.png" alt="Ophanim Logo">
-        </header>
+  <div class="container">
+    <header class="logo">
+      <img src="logo_white.png" alt="Ophanim Logo" />
+    </header>
 
-        <main>
-            <div class="image-container">
-                <img src="albumcover.png" alt="Album Cover" class="square-image">
-            </div>
+    <main class="container">
+      <img src="consumed.jpg" alt="Consumed Cover Art" class="hero-image" />
 
-            <div class="social-links">
-                <a href="https://soundcloud.com/ophanimalbum" target="_blank" class="social-icon">
-                    <img src="soundcloud-white-icon.png" alt="SoundCloud">
-                </a>
-                <a href="https://www.instagram.com/ophan1m/" target="_blank" class="social-icon">
-                    <img src="instagram-white-icon.png" alt="Instagram">
-                </a>
-                <a href="https://www.youtube.com/@ophanimalbum" target="_blank" class="social-icon">
-                    <img src="youtube-app-white-icon.png" alt="YouTube">
-                </a>
-            </div>
-        </main>
-    </div>
+      <a
+        href="https://distrokid.com/hyperfollow/ophanim4/consumed"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button-link"
+      >
+        Pre-save Consumed
+      </a>
+
+      <div class="social-links">
+        <a href="https://soundcloud.com/ophanimalbum" target="_blank" class="social-icon">
+          <img src="soundcloud-white-icon.svg" alt="SoundCloud" />
+        </a>
+        <a href="https://www.instagram.com/ophan1m/" target="_blank" class="social-icon">
+          <img src="instagram-icon.svg" alt="Instagram" />
+        </a>
+        <a href="https://www.youtube.com/@ophanimalbum" target="_blank" class="social-icon">
+          <img src="youtube-icon.svg" alt="YouTube" />
+        </a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
